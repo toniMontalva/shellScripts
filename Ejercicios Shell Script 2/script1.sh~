@@ -1,0 +1,6 @@
+
+for i in $(cat nombres.txt); do
+	for x in `seq 1 $1`; do
+		mkdir -p $i/personal$x
+	done
+done

@@ -1,0 +1,11 @@
+media=0
+total=0
+totalPrec=0
+precipitacion=0
+for $i in(cat precipitaciones.txt); do
+	precipitacion=`awk '{print $1'}`
+	total=`expr $total + 1`
+	totalPrec=`expr $totalPrec + $precipitacion`
+done
+media=`expr totalPrec / total`
+echo "La media de precipitaciones es " + media
